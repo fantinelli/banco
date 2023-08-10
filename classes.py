@@ -1,7 +1,6 @@
 class Cliente:
-    def __init__(self, nome, sobrenome, CPF, RG, telefone, email, renda, depinicial):
+    def __init__(self, nome, CPF, RG, telefone, email, renda, depinicial):
         self.nome = nome
-        self.sobrenome = sobrenome
         self.CPF = CPF
         self.RG = RG
         self.telefone = telefone
@@ -10,13 +9,10 @@ class Cliente:
         self.depinicial = depinicial
 
     def getCliente(self):
-        return self.nome, self.sobrenome, self.CPF, self.RG, self.telefone, self.email, self.renda, self.depinicial
+        return self.nome, self.CPF, self.RG, self.telefone, self.email, self.renda, self.depinicial
 
     def setNome(self, x):
         self.nome = x
-
-    def setSobrenome(self, x):
-        self.sobrenome = x
 
     def setCPF(self, x):
         self.CPF = x
