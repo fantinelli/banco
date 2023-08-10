@@ -31,6 +31,8 @@ class Cliente:
 
     def setDepinicial(self, x):
         self.depinicial = x
+
+
 class Agencia:
     def __init__(self, nome):
         self.Cliente = []
