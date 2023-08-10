@@ -1,5 +1,5 @@
 ## Projeto Sistema Bancário
-Este é um projeto do curso de Desenvolvimento de Sistemas, onde criaremos um Sistema Bancário que tera as opções :
+Este é um projeto do curso de Desenvolvimento de Sistemas, onde criaremos um Sistema Bancário que terá as opções :
 
 - Cadastrar cliente
 - Excluir cliente
