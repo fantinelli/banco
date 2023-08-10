@@ -31,3 +31,10 @@ class Cliente:
 
     def setDepinicial(self, x):
         self.depinicial = x
+class Agencia:
+    def __init__(self, nome):
+        self.Cliente = []
+
+    def novo_cliente(self, nome, saldo_inicial = 0):
+        registrar_cliente = Cliente(nome, saldo_inicial)
+        self.Cliente.append(registrar_cliente)
