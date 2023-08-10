@@ -55,3 +55,10 @@ class ContaBancaria:
             print(f"Depósito de R${valor:.2f} realizado. Saldo atual: R${self.saldo:.2f}")
         else:
             print("Valor de depósito inválido.")
+
+
+
+
+        # Método para consultar o saldo atual da conta
+    def consultar_saldo(self):
+        print(f"Saldo atual: R${self.saldo:.2f}")
