@@ -38,3 +38,18 @@ class Agencia:
     def novo_cliente(self, nome, saldo_inicial = 0):
         registrar_cliente = Cliente(nome, saldo_inicial)
         self.Cliente.append(registrar_cliente)
+
+
+class ContaBancaria:
+    # Construtor da classe, inicia com o nome do titular e saldo (opcional, padrão 0)
+    def __init__(self, nome, saldo=0):
+        self.nome = nome 
+        self.saldo = saldo 
+
+    # Método para depositar dinheiro na conta
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            print(f"Depósito de R${valor:.2f} realizado. Saldo atual: R${self.saldo:.2f}")
+        else:
+            print("Valor de depósito inválido.")
