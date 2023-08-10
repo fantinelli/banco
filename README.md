@@ -11,3 +11,11 @@ Este é um projeto do curso de Desenvolvimento de Sistemas, onde criaremos um Si
 - Agência
 
 ## 
+No cadastro de cada cliente será necessário o usuário adicionar:
+- Nome
+- RG
+- CPF
+- Telefone
+- E-mail
+- Salário
+- Depósito Inicial
