@@ -8,6 +8,7 @@ Este é um projeto do curso de Desenvolvimento de Sistemas, onde criaremos um Si
 - Transferência entre clientes
 - Depositar
 - Sacar
+- Consultar saldo
 - Agência
 
 ## 
