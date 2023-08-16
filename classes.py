@@ -40,6 +40,10 @@ class Agencia:
     def novo_cliente(self, cliente):
         self._cliente.append(cliente)
 
+    def excluir_cliente(self, cliente):
+        if cliente in self._cliente:
+            self._cliente.pop(cliente)
+
 
 class ContaBancaria:
     # Construtor da classe, inicia com o nome do titular e saldo (opcional, padrão 0)
