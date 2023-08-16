@@ -34,12 +34,11 @@ class Cliente:
 
 
 class Agencia:
-    def __init__(self, nome):
-        self.Cliente = []
+    def __init__(self):
+        self._cliente = []
 
-    def novo_cliente(self, nome, saldo_inicial = 0):
-        registrar_cliente = Cliente(nome, saldo_inicial)
-        self.Cliente.append(registrar_cliente)
+    def novo_cliente(self, cliente):
+        self._cliente.append(cliente)
 
 
 class ContaBancaria:
