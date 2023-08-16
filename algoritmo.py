@@ -9,14 +9,10 @@ def criar_cliente(self):
     email = str(input("Digite o e-mail: "))
     renda = float(input("Digite a renda: "))
     depinicial = float(input("Digite o depósito inicial: "))
-    novo_cliente = Cliente( nome, CPF, RG, telefone, email, renda, depinicial)
-    self.Cliente[nome] = novo_cliente
-    print(f"Cliente '{nome}' criado")
 
-def listar_clientes(self):
-    print("Lista de Clientes:")
-    for Cliente in self.Cliente:
-        print(Cliente)
+    cliente = Cliente( nome, CPF, RG, telefone, email, renda, depinicial)
+    return cliente
+
 
 class Transferencia:
     def __init__(self, cliente, saldo, saque, deposito):
