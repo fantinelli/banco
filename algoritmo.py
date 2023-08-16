@@ -13,7 +13,14 @@ def criar_cliente(self):
     cliente = Cliente( nome, CPF, RG, telefone, email, renda, depinicial)
     return cliente
 
-
+def excluir_clientes():
+    cliente_excluido = str(input("Digite o nome do cliente: "))
+    if cliente_excluido in Agencia:
+        Agencia.pop(cliente_excluido)
+        print(f" O cliente {cliente_excluido} foi excluído")
+    else:
+        print("Este nome não está registrado")
+        
 class Transferencia:
     def __init__(self, cliente, saldo, saque, deposito):
         self.cliente = cliente
