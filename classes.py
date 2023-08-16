@@ -40,6 +40,12 @@ class Agencia:
     def novo_cliente(self, cliente):
         self._cliente.append(cliente)
 
+    def percorrer_lista(self, nome):
+        for cliente in self._clientes:
+            if cliente.nome == nome:
+                return cliente
+        return None    
+
     def excluir_cliente(self, cliente):
         if cliente in self._cliente:
             self._cliente.pop(cliente)
