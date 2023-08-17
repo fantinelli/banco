@@ -13,6 +13,15 @@ def criar_cliente():
             else:
                 x = 1
 
+    x = 2
+    while x == 2:
+        email = str(input("Digite o email do cliente: "))
+        for a in email:
+             if a.isdigit():
+                  print("Valor inválido")
+                  break
+             else: x = 4
+
     
     email = str(input("Digite o email do cliente: "))
     CPF = float(input("Digite o CPF do cliente: "))
