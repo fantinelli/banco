@@ -42,7 +42,22 @@ def excluir():
 def alterar():
      
 def transferencia():
-     
+    nome_cliente = str( input("Digite o nome do cliente: "))
+    nome_destino = str( input("Digite o nome do Destinatário: "))
+    valor_envio = float(input("Digite o valor a depositar: "))
+    
+
+    for cliente in agencia._clientes:
+        if cliente.nome == nome_cliente:
+            cliente_encontrado = cliente
+            break    
+
+        if cliente_encontrado:
+            cliente_encontrado.depositar(valor_envio)
+            valor_envio + self.saldo(nome_destino)
+        else:
+            print("Transferência Incompleta")
+
 def deposito():
     nome_cliente = input("Digite o nome do cliente: ")
     valor_deposito = float(input("Digite o valor a depositar: "))
