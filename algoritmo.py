@@ -2,15 +2,25 @@ from classes import *
 agencia = Agencia()
 
 def criar_cliente():
-    nome = str(input("Digite o nome do cliente: "))
+
+    x = 0
+    while x == 0:
+        nome = str(input("Digite o nome do cliente: "))
+        for i in nome:
+            if i.isdigit():
+                print("Valor inválido")
+                break
+            else:
+                x = 1
+
+    
     email = str(input("Digite o email do cliente: "))
     CPF = float(input("Digite o CPF do cliente: "))
     RG = float(input("Digite o RG do cliente: "))
     telefone = float(input("Digite o telefone do cliente: "))
     renda = float(input("Digite a renda do cliente: "))    
-    depinicial = float(input("Digite o depósito inicial do cliente: ")) 
-    saldo = ("")
-    cli = nome, email, CPF, RG, telefone, renda, depinicial, saldo
+    depinicial= float(input("Digite o depósito inicial do cliente: ")) 
+    cli = nome, email, CPF, RG, telefone, renda, depinicial
     agencia.novo_cliente(nome)
     return cli
 
