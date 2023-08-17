@@ -92,9 +92,18 @@ class Transferencia:
     def __init__(self, cliente, saldo):
         self._cliente = cliente
         self._saldo = saldo
+        self._enviado = 0
+        self._recebido = 0
+        
+    def deposito(self, valor):
+        self._saldo += valor 
+        self._recebido += valor
+
+    def saque(self, valor):
+        self._saldo -= valor
 
     def detalhes(self):
-        print(f'Cliente: {self._cliente} \nSaldo: {self._saldo} \nDeposito:{self._saldo}')
+        print(f'Cliente: {self._cliente}\nSaldo: {self._saldo}\n')
 
     def setSaldo(self, x):
         self._saldo = x
