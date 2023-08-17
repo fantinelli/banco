@@ -65,9 +65,16 @@ class ContaBancaria:
         else:
             print("Valor de depósito inválido.")
 
+    # Método para sacar dinheiro da conta
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            print(f"Saque de R${valor:.2f} realizado. Saldo atual: R${self.saldo:.2f}")
+        else:
+            print("Saldo insuficiente ou valor de saque inválido.")
+    
 
-
-
+    
         # Método para consultar o saldo atual da conta
     def consultar_saldo(self):
         print(f"Saldo atual: R${self.saldo:.2f}")
