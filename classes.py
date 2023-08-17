@@ -42,6 +42,25 @@ class Cliente:
     def setDepinicial(self, x):
         self.depinicial = x
 
+
+class Agencia:
+    def __init__(self):
+        self._cliente = []
+
+    def novo_cliente(self, cliente):
+        self._cliente.append(cliente)
+        print("fulano foi adicionado")
+
+    def excluir_cliente(self, cliente):
+        if cliente in self._cliente:
+            self._cliente.remove(cliente)
+            print(f"O cliente {cliente} foi excluído")
+        else:
+            print("nome não registrado")
+
+
+
+
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     # Método para depositar dinheiro na conta
@@ -68,22 +87,6 @@ class Cliente:
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-class Agencia:
-    def __init__(self):
-        self._cliente = []
-
-    def novo_cliente(self, cliente):
-        self._cliente.append(cliente)
-        print("fulano foi adicionado")
-
-    def excluir_cliente(self, cliente):
-        if cliente in self._cliente:
-            self._cliente.remove(cliente)
-            print(f"O cliente {cliente} foi excluído")
-        else:
-            print("nome não registrado")
-
-# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 class Transferencia:
     
