@@ -100,8 +100,8 @@ def main():
     tam = 30
     while True:
             try:
-
-                                print(f"+{'-'*tam}+")
+            
+                print(f"+{'-'*tam}+")
                 print(f"|{'BEM VINDO AO SOFTWARE DO BANCO':^{tam}}")
                 print(f"+{'-'* tam}+")
                 print("O que deseja fazer? \n [1] Cadastrar cliente \n [2] Excluir cliente \n [3] Alterar cliente \n [4] Transferencia \n [5] Depositar \n [6] Sacar \n [7] Consultar saldo \n [8] Agencia \n [9] Sair")
@@ -147,3 +147,4 @@ def main():
             except Exception:
                 print('Problema: Digito não correspondente')    
                     
+
