@@ -1,27 +1,21 @@
 from classes import *
-
+agencia = Agencia()
 
 def criar_cliente():
     nome = str(input("Digite o nome do cliente: "))
-    CPF = int(input("Digite o CPF: "))
-    RG = int(input("Digite o RG: "))
-    telefone = int(input("Digite o telefone: "))
-    email = str(input("Digite o e-mail: "))
-    renda = float(input("Digite a renda: "))
-    depinicial = float(input("Digite o depósito inicial: "))
-
-    cliente = Cliente( nome, CPF, RG, telefone, email, renda, depinicial)
-    return cliente
+    email = str(input("Digite o email do cliente: "))
+    CPF = float(input("Digite o CPF do cliente: "))
+    RG = float(input("Digite o RG do cliente: "))
+    telefone = float(input("Digite o telefone do cliente: "))
+    renda = float(input("Digite a renda do cliente: "))    
+    depinicial= float(input("Digite o depósito inicial do cliente: ")) 
+    cli = nome, email, CPF, RG, telefone, renda, depinicial
+    agencia.novo_cliente(nome)
+    return cli
 
 def excluir():
     cliente= str(input("Digite o nome do cliente a ser excluído: "))
-    objeto = Agencia(cliente)
-    y = objeto.excluir_cliente()
-
-    if cliente in Agencia:
-        print(f" O cliente {y} foi excluído")
-    else:
-        print("Este nome não está registrado")
+    agencia.excluir_cliente(cliente)
 
 
 def main():
