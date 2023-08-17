@@ -95,8 +95,6 @@ def main():
             break
             
 class Transferencia:
-    def __init__(self, cliente, saldo, saque, deposito):
-        self.cliente = clienteclass Transferencia:
     
     def __init__(self, cliente, saldo):
         self._cliente = cliente
@@ -107,6 +105,3 @@ class Transferencia:
 
     def setSaldo(self, x):
         self._saldo = x
-        self.saldo = saldo
-        self.saldo - self.saque == saque
-        self.saldo + self.deposito == deposito
