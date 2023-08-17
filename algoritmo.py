@@ -44,48 +44,48 @@ def alterar():
 def transferencia():
      
 def deposito():
-    nome_cliente = str( input("Digite o nome do cliente: "))
+    nome_cliente = input("Digite o nome do cliente: ")
     valor_deposito = float(input("Digite o valor a depositar: "))
-    
+    cliente_encontrado = None
 
-    for cliente in agencia._clientes:
+    for cliente in agencia._cliente:  # Corrija para _cliente
         if cliente.nome == nome_cliente:
             cliente_encontrado = cliente
             break
 
-        if cliente_encontrado:
-            cliente_encontrado.depositar(valor_deposito)
-        else:
-            print("Cliente não encontrado.")
-     
+    if cliente_encontrado:
+        cliente_encontrado.depositar(valor_deposito)
+    else:
+        print("Cliente não encontrado.")
+
 def sacar():
     nome_cliente = input("Digite o nome do cliente: ")
     valor_saque = float(input("Digite o valor a sacar: "))
     cliente_encontrado = None
 
-    for cliente in agencia._clientes:
+    for cliente in agencia._cliente:  # Corrija para _cliente
         if cliente.nome == nome_cliente:
             cliente_encontrado = cliente
             break
 
-        if cliente_encontrado:
-            cliente_encontrado.sacar(valor_saque)
-        else:
-            print("Cliente não encontrado.")
-    
+    if cliente_encontrado:
+        cliente_encontrado.sacar(valor_saque)
+    else:
+        print("Cliente não encontrado.")
+
 def consultar_saldo():
     nome_cliente = input("Digite o nome do cliente: ")
     cliente_encontrado = None
 
-    for cliente in agencia._clientes:
+    for cliente in agencia._cliente: 
         if cliente.nome == nome_cliente:
             cliente_encontrado = cliente
             break
 
-        if cliente_encontrado:
-            cliente_encontrado.consultar_saldo()
-        else:
-            print("Cliente não encontrado.")
+    if cliente_encontrado:
+        cliente_encontrado.consultar_saldo()
+    else:
+        print("Cliente não encontrado.")
 
 def main():
     tam = 30
