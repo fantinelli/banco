@@ -100,10 +100,26 @@ class Transferencia:
         self._recebido += valor
 
     def saque(self, valor):
-        self._saldo -= valor
+        if valor <= self._saldo:
+            self._saldo -= valor
+            self._enviado += valor
+        else:
+            print("Saldo Insuficiente")
 
     def detalhes(self):
-        print(f'Cliente: {self._cliente}\nSaldo: {self._saldo}\n')
+        print(f'Cliente: {self._cliente}\nSaldo: {self._saldo}')
+        if self._enviado > 0:
+            print(f"Sua transferência foi enviada! - {self._enviado}")
+        if self._recebido > 0:
+            print(f"Sua transferência foi recebida! - {self._recebido}")
+        print()
 
-    def setSaldo(self, x):
-        self._saldo = x
+p1 = Transferencia('José', 3000)
+p1.deposito(input("Coloque o valor que deseja depositar:"))
+p1.saque(input("Coloque o valor que deseja sacar:"))
+p1.detalhes()
+
+p2 = Transferencia('Sérgio', 5500)
+p2.deposito(input("Coloque o valor que deseja depositar:"))
+p2.saque(input("Coloque o valor que deseja sacar:"))
+p2.detalhes()
