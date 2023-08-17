@@ -34,17 +34,11 @@ class Cliente:
 
 
 class Agencia:
-    def __init__(self):
+    def __init__(self, cliente):
         self._cliente = []
 
     def novo_cliente(self, cliente):
         self._cliente.append(cliente)
-
-    def percorrer_lista(self, nome):
-        for cliente in self._clientes:
-            if cliente.nome == nome:
-                return cliente
-        return None    
 
     def excluir_cliente(self, cliente):
         if cliente in self._cliente:
