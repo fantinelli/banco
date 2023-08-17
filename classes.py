@@ -73,15 +73,16 @@ class Cliente:
 
 
 class Agencia:
-    # cria a lista de cliente da agencia bancaria
     def __init__(self):
         self._cliente = []
 
-    # adiciona um novo cliente a lista criada
     def novo_cliente(self, cliente):
-        self._cliente.append(cliente) 
+        self._cliente.append(cliente)
+        print("fulano foi adicionado")
 
-    # apaga um cliente da lista da agencia
     def excluir_cliente(self, cliente):
         if cliente in self._cliente:
-            self._cliente.pop(cliente)
+            self._cliente.remove(cliente)
+            print(f"O cliente {cliente} foi excluído")
+        else:
+            print("nome não registrado")
