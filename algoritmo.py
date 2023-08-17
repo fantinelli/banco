@@ -43,10 +43,7 @@ def alterar():
      
    while True:
    
-   
-        print("Você está prestes a criar um novo cliente, insira as informações solicitadas.")
-        criar_cliente()
-        escolha2 = int(input("O que deseja fazer? \n [1] Voltar ao menu \n [2] Adicionar outro cliente \n [3 Fechar o software] \n > "))
+        escolha2 = int(input("O que deseja fazer? \n [1] Alterar Nome \n [2] Alterar CPF \n [3] Alterar RG \n [4] Alterar telefone \n [5] Alterar Email \n [6] Alterar Renda > "))
         if escolha2 == 1:
             agencia.setNome (input("qual seria a alteração?"))
 
