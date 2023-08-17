@@ -118,7 +118,7 @@ def main():
 
                 elif escolha1 == 4:
                      print("Realizar transfererencia ")
-                     transferencia()
+                     Transferencia()
 
                 elif escolha1 == 5:
                      print("Realizar depósito")
