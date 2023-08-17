@@ -65,17 +65,14 @@ class Agencia:
 
     # Método para depositar dinheiro na conta
     def depositar(self, valor):
-        if valor > 0:
-            self.saldo += valor
-            print(f"Depósito de R${valor:.2f} realizado. Saldo atual: R${self.saldo:.2f}")
-        else:
-            print("Valor de depósito inválido.")
+        self.saldo += valor
+        print(f"Depósito de R${valor:.2f} realizado. Novo saldo: R${self.saldo:.2f}")
 
     # Método para sacar dinheiro da conta
     def sacar(self, valor):
-        if 0 < valor <= self.saldo:
+        if self.saldo >= valor:
             self.saldo -= valor
-            print(f"Saque de R${valor:.2f} realizado. Saldo atual: R${self.saldo:.2f}")
+            print(f"Saque de R${valor:.2f} realizado. Novo saldo: R${self.saldo:.2f}")
         else:
             print("Saldo insuficiente ou valor de saque inválido.")
     
