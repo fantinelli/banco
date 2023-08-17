@@ -41,6 +41,33 @@ def excluir():
 
 def alterar():
      
+   while True:
+   
+   
+        print("Você está prestes a criar um novo cliente, insira as informações solicitadas.")
+        criar_cliente()
+        escolha2 = int(input("O que deseja fazer? \n [1] Voltar ao menu \n [2] Adicionar outro cliente \n [3 Fechar o software] \n > "))
+        if escolha2 == 1:
+            agencia.setNome (input("qual seria a alteração?"))
+
+        elif escolha2 == 2:
+            agencia.setCPF (input("qual seria a alteração?"))
+
+        elif escolha2 == 3:
+            agencia.setRG (input("qual seria a alteração?"))
+
+        elif escolha2 == 4:
+            agencia.setTelefone (input("qual seria a alteração"))
+
+        elif escolha2 == 5:
+            agencia.setEmail (input("qual seria a alteração?"))
+
+        elif escolha2 == 6:
+            agencia.setRenda (input("qual seria a alteração"))
+
+        elif escolha2 == 7:
+            break
+     
 def transferencia():
     nome_cliente = str( input("Digite o nome do cliente: "))
     nome_destino = str( input("Digite o nome do Destinatário: "))
