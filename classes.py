@@ -42,9 +42,7 @@ class Cliente:
     def setDepinicial(self, x):
         self.depinicial = x
 
-
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
     # Método para depositar dinheiro na conta
     def depositar(self, valor):
@@ -86,3 +84,17 @@ class Agencia:
             print(f"O cliente {cliente} foi excluído")
         else:
             print("nome não registrado")
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class Transferencia:
+    
+    def __init__(self, cliente, saldo):
+        self._cliente = cliente
+        self._saldo = saldo
+
+    def detalhes(self):
+        print(f'Cliente: {self._cliente} \nSaldo: {self._saldo} \nDeposito:{self._saldo}')
+
+    def setSaldo(self, x):
+        self._saldo = x
