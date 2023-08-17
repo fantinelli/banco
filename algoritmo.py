@@ -8,8 +8,9 @@ def criar_cliente():
     RG = float(input("Digite o RG do cliente: "))
     telefone = float(input("Digite o telefone do cliente: "))
     renda = float(input("Digite a renda do cliente: "))    
-    depinicial= float(input("Digite o depósito inicial do cliente: ")) 
-    cli = nome, email, CPF, RG, telefone, renda, depinicial
+    depinicial = float(input("Digite o depósito inicial do cliente: ")) 
+    saldo = ()
+    cli = nome, email, CPF, RG, telefone, renda, depinicial, saldo
     agencia.novo_cliente(nome)
     return cli
 
@@ -48,7 +49,7 @@ def main():
                     valor_deposito = float(input("Digite o valor a depositar: "))
                     cliente_encontrado = None
 
-                    for cliente in agencia._clientes:
+                    for cliente in Agencia._clientes:
                         if cliente.nome == nome_cliente:
                             cliente_encontrado = cliente
                             break
@@ -63,7 +64,7 @@ def main():
                     valor_saque = float(input("Digite o valor a sacar: "))
                     cliente_encontrado = None
 
-                    for cliente in agencia._clientes:
+                    for cliente in Agencia._clientes:
                         if cliente.nome == nome_cliente:
                             cliente_encontrado = cliente
                             break
@@ -77,7 +78,7 @@ def main():
                     nome_cliente = input("Digite o nome do cliente: ")
                     cliente_encontrado = None
 
-                    for cliente in agencia._clientes:
+                    for cliente in Agencia._clientes:
                         if cliente.nome == nome_cliente:
                             cliente_encontrado = cliente
                             break
@@ -91,4 +92,4 @@ def main():
                     break
                     
             except Exception:
-                print('Problema: Digito não correspondente')    
+                print('Problema: Digito não correspondente')  
