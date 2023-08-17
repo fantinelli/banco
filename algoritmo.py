@@ -13,11 +13,13 @@ def criar_cliente():
     cliente = Cliente( nome, CPF, RG, telefone, email, renda, depinicial)
     return cliente
 
-def excluir_clientes(agencia):
-    cliente_excluido = str(input("Digite o nome do cliente: "))
-    cliente = agencia.percorrer_lista(cliente_excluido)
-    if cliente_excluido in Agencia:
-        print(f" O cliente {cliente_excluido} foi excluído")
+def excluir():
+    cliente= str(input("Digite o nome do cliente a ser excluído: "))
+    objeto = Agencia(cliente)
+    y = objeto.excluir_cliente()
+
+    if cliente in Agencia:
+        print(f" O cliente {y} foi excluído")
     else:
         print("Este nome não está registrado")
 
