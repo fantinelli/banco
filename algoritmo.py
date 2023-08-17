@@ -37,6 +37,53 @@ def excluir():
     agencia.excluir_cliente(cliente)
 
 
+def depósito():
+    nome_cliente = input("Digite o nome do cliente: ")
+    valor_deposito = float(input("Digite o valor a depositar: "))
+    cliente_encontrado = None
+
+    for cliente in Agencia._clientes:
+        if cliente.nome == nome_cliente:
+            cliente_encontrado = cliente
+            break
+
+        if cliente_encontrado:
+            cliente_encontrado.depositar(valor_deposito)
+        else:
+            print("Cliente não encontrado.")
+
+
+def saque():
+    nome_cliente = input("Digite o nome do cliente: ")
+    valor_saque = float(input("Digite o valor a sacar: "))
+    cliente_encontrado = None
+
+    for cliente in Agencia._clientes:
+        if cliente.nome == nome_cliente:
+            cliente_encontrado = cliente
+            break
+
+        if cliente_encontrado:
+            cliente_encontrado.sacar(valor_saque)
+        else:
+            print("Cliente não encontrado.")
+
+
+def saldo():
+    nome_cliente = input("Digite o nome do cliente: ")
+    cliente_encontrado = None
+
+    for cliente in Agencia._clientes:
+        if cliente.nome == nome_cliente:
+            cliente_encontrado = cliente
+            break
+
+        if cliente_encontrado:
+            cliente_encontrado.consultar_saldo()
+        else:
+            print("Cliente não encontrado.")
+
+
 def main():
     tam = 30
     while True:
@@ -63,48 +110,13 @@ def main():
                 excluir()
 
             elif escolha1 == 5:
-                nome_cliente = input("Digite o nome do cliente: ")
-                valor_deposito = float(input("Digite o valor a depositar: "))
-                cliente_encontrado = None
-
-                for cliente in Agencia._clientes:
-                    if cliente.nome == nome_cliente:
-                        cliente_encontrado = cliente
-                        break
-
-                    if cliente_encontrado:
-                        cliente_encontrado.depositar(valor_deposito)
-                    else:
-                        print("Cliente não encontrado.")
+                depósito()
 
             elif escolha1 == 6:
-                nome_cliente = input("Digite o nome do cliente: ")
-                valor_saque = float(input("Digite o valor a sacar: "))
-                cliente_encontrado = None
-
-                for cliente in Agencia._clientes:
-                    if cliente.nome == nome_cliente:
-                        cliente_encontrado = cliente
-                        break
-
-                if cliente_encontrado:
-                    cliente_encontrado.sacar(valor_saque)
-                else:
-                    print("Cliente não encontrado.")
+                saque()
 
             elif escolha1 == 7:
-                nome_cliente = input("Digite o nome do cliente: ")
-                cliente_encontrado = None
-
-                for cliente in Agencia._clientes:
-                    if cliente.nome == nome_cliente:
-                        cliente_encontrado = cliente
-                        break
-
-                if cliente_encontrado:
-                    cliente_encontrado.consultar_saldo()
-                else:
-                    print("Cliente não encontrado.")
+                saldo()
                     
             elif escolha1 == 9:
                 break
