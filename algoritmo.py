@@ -39,58 +39,56 @@ def main():
                     elif escolha2 == 3:
                             break
 
-                    elif escolha1 == 2:
-                        print("Você está prestes a excluir um cliente, insira as informações solicitadas.")
-                        excluir()
+                elif escolha1 == 2:
+                    print("Você está prestes a excluir um cliente, insira as informações solicitadas.")
+                    excluir()
 
-                    elif escolha1 == 5:
-                        nome_cliente = input("Digite o nome do cliente: ")
-                        valor_deposito = float(input("Digite o valor a depositar: "))
-                        cliente_encontrado = None
+                elif escolha1 == 5:
+                    nome_cliente = input("Digite o nome do cliente: ")
+                    valor_deposito = float(input("Digite o valor a depositar: "))
+                    cliente_encontrado = None
 
-                        for cliente in agencia._clientes:
-                            if cliente.nome == nome_cliente:
-                                cliente_encontrado = cliente
-                                break
+                    for cliente in agencia._clientes:
+                        if cliente.nome == nome_cliente:
+                            cliente_encontrado = cliente
+                            break
 
                         if cliente_encontrado:
                             cliente_encontrado.depositar(valor_deposito)
                         else:
                             print("Cliente não encontrado.")
 
-                    elif escolha1 == 6:
-                        nome_cliente = input("Digite o nome do cliente: ")
-                        valor_saque = float(input("Digite o valor a sacar: "))
-                        cliente_encontrado = None
+                elif escolha1 == 6:
+                    nome_cliente = input("Digite o nome do cliente: ")
+                    valor_saque = float(input("Digite o valor a sacar: "))
+                    cliente_encontrado = None
 
-                        for cliente in agencia._clientes:
-                            if cliente.nome == nome_cliente:
-                                cliente_encontrado = cliente
-                                break
+                    for cliente in agencia._clientes:
+                        if cliente.nome == nome_cliente:
+                            cliente_encontrado = cliente
+                            break
 
-                        if cliente_encontrado:
-                            cliente_encontrado.sacar(valor_saque)
-                        else:
-                            print("Cliente não encontrado.")
+                    if cliente_encontrado:
+                        cliente_encontrado.sacar(valor_saque)
+                    else:
+                        print("Cliente não encontrado.")
 
-                    elif escolha1 == 7:
-                        nome_cliente = input("Digite o nome do cliente: ")
-                        cliente_encontrado = None
+                elif escolha1 == 7:
+                    nome_cliente = input("Digite o nome do cliente: ")
+                    cliente_encontrado = None
 
-                        for cliente in agencia._clientes:
-                            if cliente.nome == nome_cliente:
-                                cliente_encontrado = cliente
-                                break
+                    for cliente in agencia._clientes:
+                        if cliente.nome == nome_cliente:
+                            cliente_encontrado = cliente
+                            break
 
-                        if cliente_encontrado:
+                    if cliente_encontrado:
                             cliente_encontrado.consultar_saldo()
-                        else:
+                    else:
                             print("Cliente não encontrado.")
                     
-                    elif escolha1 == 9:
-                        break
+                elif escolha1 == 9:
+                    break
                     
             except Exception:
                 print('Problema: Digito não correspondente')    
-                
-
