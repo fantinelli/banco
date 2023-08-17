@@ -93,14 +93,3 @@ def main():
         except Exception:
             print('Problema: Digito não correspondente')    
             
-class Transferencia:
-    
-    def __init__(self, cliente, saldo):
-        self._cliente = cliente
-        self._saldo = saldo
-
-    def detalhes(self):
-        print(f'Cliente: {self._cliente} \nSaldo: {self._saldo} \nDeposito:{self._saldo}')
-
-    def setSaldo(self, x):
-        self._saldo = x
