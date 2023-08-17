@@ -93,17 +93,20 @@ class Transferencia:
         self._enviado = 0
         self._recebido = 0
         
+        # Metodo para receber o dinheiro
     def deposito(self, valor):
         self._saldo += valor 
         self._recebido += valor
-
+        
+        # Metodo para enviar o dinheiro
     def saque(self, valor):
         if valor <= self._saldo:
             self._saldo -= valor
             self._enviado += valor
         else:
             print("Saldo Insuficiente")
-
+            
+        # Metodo para mostrar os detalhes da transação/transferência
     def detalhes(self):
         print(f'Cliente: {self._cliente}\nSaldo: {self._saldo}')
         if self._enviado > 0:
