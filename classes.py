@@ -1,5 +1,5 @@
 class Cliente:
-    # criação do cliente contendo uas informações
+    # Criação do cliente contendo suas informações
     def __init__(self, nome, CPF, RG, telefone, email, renda, depinicial, saldo=0):
         self.nome = nome
         self.CPF = CPF
@@ -10,38 +10,29 @@ class Cliente:
         self.depinicial = depinicial
         self.saldo = saldo
 
-    # retorna todas as informações do cliente
+    # Retorna todas as informações do cliente
     def getCliente(self):
         return self.nome, self.CPF, self.RG, self.telefone, self.email, self.renda, self.depinicial, self.saldo
     
-    # edita a informação "nome" do cliente
+    # Edita a informação "nome" do cliente
     def setNome(self, x):
         self.nome = x
 
-    # edita a informação "CPF" do cliente
+    # Edita a informação "CPF" do cliente
     def setCPF(self, x):
         self.CPF = x
 
-    # edita a informação "RG" do cliente
+    # Edita a informação "RG" do cliente
     def setRG(self, x):
         self.RG = x
 
-    # edita a informação "telefone" do cliente
+    # Edita a informação "telefone" do cliente
     def setTelefone(self, x):
         self.telefone = x
 
-    # edita a informaçã "email" do cliente 
+    # Edita a informação "email" do cliente 
     def setEmail(self, x):
         self.email = x
-
-    # edita o valor da renda do cliente
-    def setRenda(self, x):
-        self.renda = x
-
-    # edita a iformação do depósito inicial do cliente
-    def setDepinicial(self, x):
-        self.depinicial = x
-
 
 class Agencia:
     def __init__(self):
@@ -80,10 +71,7 @@ class Agencia:
     def consultar_saldo(self):
         print(f"Saldo atual: R${self.saldo:.2f}")
 
-
-
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 class Transferencia:
     
@@ -114,5 +102,3 @@ class Transferencia:
         if self._recebido > 0:
             print(f"Sua transferência foi recebida! - {self._recebido}")
         print()
-
-
