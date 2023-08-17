@@ -83,48 +83,18 @@ def transferencia():
             print("Transferência Incompleta")
 
 def deposito():
-    nome_cliente = input("Digite o nome do cliente: ")
-    valor_deposito = float(input("Digite o valor a depositar: "))
-    cliente_encontrado = None
-
-    for cliente in agencia._cliente:  # Corrija para _cliente
-        if cliente.nome == nome_cliente:
-            cliente_encontrado = cliente
-            break
-
-    if cliente_encontrado:
-        cliente_encontrado.depositar(valor_deposito)
-    else:
-        print("Cliente não encontrado.")
+    nome = input("Digite o Nome do cliente: ")
+            cliente = sistema.buscar_cliente(nome)
+            if cliente:
+                valor = float(input("Digite o valor do depósito: "))
+                cliente.deposito(valor)
 
 def sacar():
-    nome_cliente = input("Digite o nome do cliente: ")
-    valor_saque = float(input("Digite o valor a sacar: "))
-    cliente_encontrado = None
-
-    for cliente in agencia._cliente:  # Corrija para _cliente
-        if cliente.nome == nome_cliente:
-            cliente_encontrado = cliente
-            break
-
-    if cliente_encontrado:
-        cliente_encontrado.sacar(valor_saque)
-    else:
-        print("Cliente não encontrado.")
-
-def consultar_saldo():
-    nome_cliente = input("Digite o nome do cliente: ")
-    cliente_encontrado = None
-
-    for cliente in agencia._cliente: 
-        if cliente.nome == nome_cliente:
-            cliente_encontrado = cliente
-            break
-
-    if cliente_encontrado:
-        cliente_encontrado.consultar_saldo()
-    else:
-        print("Cliente não encontrado.")
+    nome = input("Digite o Nome do cliente: ")
+            cliente = sistema.buscar_cliente(nome)
+            if cliente:
+                valor = float(input("Digite o valor do saque: "))
+                cliente.saque(valor)
 
 def main():
     tam = 30
