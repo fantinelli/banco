@@ -68,8 +68,6 @@ class Cliente:
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-
 class Agencia:
     def __init__(self):
         self._cliente = []
@@ -114,12 +112,3 @@ class Transferencia:
             print(f"Sua transferência foi recebida! - {self._recebido}")
         print()
 
-p1 = Transferencia('José', 3000)
-p1.deposito(input("Coloque o valor que deseja depositar:"))
-p1.saque(input("Coloque o valor que deseja sacar:"))
-p1.detalhes()
-
-p2 = Transferencia('Sérgio', 5500)
-p2.deposito(input("Coloque o valor que deseja depositar:"))
-p2.saque(input("Coloque o valor que deseja sacar:"))
-p2.detalhes()
