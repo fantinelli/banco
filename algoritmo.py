@@ -20,8 +20,9 @@ def criar_cliente():
     telefone = float(input("Digite o telefone do cliente: "))
     renda = float(input("Digite a renda do cliente: "))    
     depinicial= float(input("Digite o depósito inicial do cliente: ")) 
-    cli = nome, email, CPF, RG, telefone, renda, depinicial
-    agencia.novo_cliente(nome)
+    saldo_inicial = 0
+    cli = Cliente(nome, email, CPF, RG, telefone, renda, depinicial, saldo_inicial)
+    agencia.novo_cliente(cli)
     return cli
 
 def excluir():
