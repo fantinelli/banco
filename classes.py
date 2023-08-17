@@ -49,7 +49,7 @@ class Agencia:
 
     def novo_cliente(self, cliente):
         self._cliente.append(cliente)
-        print("fulano foi adicionado")
+        print(f"{cliente} foi adicionado")
 
     def excluir_cliente(self, cliente):
         if cliente in self._cliente:
