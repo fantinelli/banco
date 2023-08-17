@@ -12,7 +12,7 @@ class Cliente:
 
     # retorna todas as informações do cliente
     def getCliente(self):
-        return self.nome, self.CPF, self.RG, self.telefone, self.email, self.renda, self.depinicial
+        return self.nome, self.CPF, self.RG, self.telefone, self.email, self.renda, self.depinicial, self.saldo
     
     # edita a informação "nome" do cliente
     def setNome(self, x):
