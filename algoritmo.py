@@ -84,17 +84,17 @@ def transferencia():
 
 def deposito():
     nome = input("Digite o Nome do cliente: ")
-            cliente = sistema.buscar_cliente(nome)
-            if cliente:
-                valor = float(input("Digite o valor do depósito: "))
-                cliente.deposito(valor)
+    cliente = agencia.buscar_cliente(nome)
+    if cliente:
+        valor = float(input("Digite o valor do depósito: "))
+        cliente.deposito(valor)
 
 def sacar():
     nome = input("Digite o Nome do cliente: ")
-            cliente = sistema.buscar_cliente(nome)
-            if cliente:
-                valor = float(input("Digite o valor do saque: "))
-                cliente.saque(valor)
+    cliente = agencia.buscar_cliente(nome)
+    if cliente:
+        valor = float(input("Digite o valor do saque: "))
+        cliente.saque(valor)
 
 def main():
     tam = 30
@@ -136,15 +136,9 @@ def main():
                     case 6:
                         print("Sacar")
                         sacar()
-
-                    case 7:
-                        print("Consultar saldo")
-                        consultar_saldo()
                         
                     case _:
                             break
                         
             except Exception:
                 print('Problema: Digito não correspondente')    
-                    
-
